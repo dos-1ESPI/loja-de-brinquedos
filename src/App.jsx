@@ -6,21 +6,24 @@ import Inicio from './pages/Inicio'
 import Idades from './pages/Idades'
 import Categoria from './pages/Categoria'
 import Sobre from './pages/Sobre'
+import React from 'react'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
 
 const App = () => {
   return (
     <Router>
-      <div className="">
-        <Header/>
           <Routes>
             <Route path="/" element={<Inicio/>}/>
             <Route path="/Idades" element={<Idades/>} />
             <Route path="/Categoria" element={<Categoria/>} />
             <Route path="/Sobre" element={<Sobre/>} />
-          </Routes>
-      </div>
-    </Router>
-  )
+          <Routes/>
+    <Router/>
+
+      <Header/>
+      <Hero/>
+      <Footer/>
 }
 
 export default App
